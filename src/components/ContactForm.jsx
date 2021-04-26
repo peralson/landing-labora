@@ -21,6 +21,8 @@ const ContactForm = () => {
     const [success, setSuccess] = useState(null)
     const [loading, setLoading] = useState(false)
 
+    const encode = data => Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&")
+
     const SignupSchema = Yup.object().shape({
         name: Yup.string()
             .required('El nombre es obligatorio'),
@@ -54,19 +56,26 @@ const ContactForm = () => {
                             phone: ''
                         }}
                         validationSchema={SignupSchema}
-                        onSubmit={values => {
+                        onSubmit={(values, submitProps) => {
                             setLoading(true)
 
-                            console.log(values)
-
-                            setTimeout(() => {
-                                setLoading(false)
-                                setSuccess('¡Gracias! nos pondremos en contacto contigo en menos de 48 horas.')
-                            }, 1200)
+                            fetch("/", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                                body: encode({ "form-name": "ContactForm", ...values})
+                            })
+                                .then(res => {
+                                    if (!res.ok) return alert('Ha ocurrido un error: ' + res.status)
+                                    setLoading(false)
+                                    submitProps.resetForm()
+                                    setSuccess('¡Gracias! nos pondremos en contacto contigo en menos de 48 horas.')
+                                })
+                                .catch(error => alert(error))
                         }}
                     >
                         {({ errors, touched, submitForm }) => (
                             <Form>
+                                <input type="hidden" name="form-name" value="ContactForm" />
                                 <div className="contactForm__form">
                                     <Field placeholder="Tu nombre" className="contactForm__form-input" name="name" />
                                     <Field placeholder="La empresa dónde trabajas" className="contactForm__form-input" name="company" />
