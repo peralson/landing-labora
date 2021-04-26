@@ -1,0 +1,52 @@
+.footer {
+    margin: 0 auto;
+    padding: 50px 0 150px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+.cta {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+}
+
+.input {
+    flex: 1;
+    margin-right: 20px;
+    background-color: rgba(255,255,255,0.25);
+    border: 0px solid white;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 25px;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+@media only screen and (max-width: 540px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,15 @@
+@import "../Vars.scss";
+
+.button {
+    padding: 10px 25px;
+    border-radius: 4px;
+    background-color: $accent;
+    cursor: pointer;
+};
+
+.buttonText {
+    font-size: 16px;
+    text-align: center;
+    color: $white;
+    font-weight: bolder;
+}
