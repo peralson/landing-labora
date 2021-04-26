@@ -20,9 +20,9 @@ const Header = ({ isDemo }) => (
                     <Link to="/for-workers">¿Eres trabajador?</Link>
                 </div> */}
                 {!isDemo && (
-                    <PrimaryButton>
-                        <Link to="/demo">Pedir una demo</Link>
-                    </PrimaryButton>
+                    <Link to="/demo">
+                        <PrimaryButton>Pedir una demo</PrimaryButton>
+                    </Link>
                 )}
             </div>
         </div>

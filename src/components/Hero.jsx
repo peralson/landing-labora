@@ -16,9 +16,9 @@ const Hero = () => (
                 <Title>Contrata a tu personal de corta duración en un click.</Title>
                 <h5>Gestiona de manera automatizada todo el proceso de contratación de personal para periodos inferiores a 5 días.</h5>
                 <div className="hero__cta">
-                    <PrimaryButton>
-                        <Link to="/demo">Pedir una demo</Link>
-                    </PrimaryButton>
+                    <Link to="/demo">
+                        <PrimaryButton>Pedir una demo</PrimaryButton>
+                    </Link>
                 </div>
             </div>
             <div className="hero__side hero__rightTop">
