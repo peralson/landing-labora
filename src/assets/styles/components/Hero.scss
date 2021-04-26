@@ -75,15 +75,19 @@
 }
 
 @media only screen and (max-width: 500px) {
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero__rightTop {
+        margin-top: 20px;
+    }
+
     .hero__rightTop .img {
         height: 180px;
     }
 
     .hero__leftBottom {
         margin-top: 20px;
-    }
-
-    .hero__cta .button {
-        flex: 1;
     }
 }

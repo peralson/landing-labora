@@ -1,5 +1,6 @@
 // React
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // Libs
 import { Formik, Form, Field } from 'formik'
@@ -7,14 +8,14 @@ import * as Yup from 'yup'
 
 // Components
 import PrimaryButton from './PrimaryButton'
-import SecondaryButton from './SecondaryButton'
+import TextButton from './TextButton'
 import Title from './Title'
 import ErrorText from './ErrorText'
 import SuccessText from './SuccessText'
 
 // Styles
 import '../assets/styles/components/ContactForm.scss'
-import { Link } from 'react-router-dom'
+import back from '../assets/img/back.png'
 
 const ContactForm = () => {
     const [success, setSuccess] = useState(null)
@@ -36,9 +37,12 @@ const ContactForm = () => {
                         <Title>El cliente manda</Title>
                         <h5 className="contactForm__desc">Será un placer conversar y mostrarte como nuestro producto puede hacer que tu vida sea más fácil.</h5>
                     </div>
-                    <SecondaryButton>
-                        <Link to="/">Volver a Home</Link>
-                    </SecondaryButton>
+                    <TextButton>
+                        <Link to="/">
+                            <img src={back} alt="Volver" />
+                            Volver a Home
+                        </Link>
+                    </TextButton>
                 </div>
                 <div className="gap"></div>
                 <div className="contactForm__right">

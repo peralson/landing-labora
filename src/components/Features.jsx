@@ -29,7 +29,7 @@ const Features = () => (
                 />
                 <FeatureItem
                     title="Match"
-                    desc="Solo los que mejor encagen aplican, tu eliges entre los que prefieras."
+                    desc="Solo los que mejor encajen aplican, tu eliges entre los que prefieras."
                     image={match}
                 />
                 <FeatureItem
@@ -49,7 +49,7 @@ const Features = () => (
                 />
                 <FeatureItem
                     title="Pagos"
-                    desc="Cada trabajador cobra en función de los trabajado."
+                    desc="Cada trabajador cobra en función de lo trabajado."
                     image={pagos}
                 />
             </div>
