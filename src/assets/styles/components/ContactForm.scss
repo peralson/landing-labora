@@ -58,7 +58,7 @@
 
 @media only screen and (max-width: 700px) {
     .contactForm {
-        padding-top: 120px;
+        padding-top: 140px;
     }
 
     .contactForm__container {
@@ -71,5 +71,9 @@
 
     .contactForm__left .secondary {
         margin-bottom: 25px;
+    }
+
+    .contactForm__right {
+        margin-bottom: 80px;
     }
 }
