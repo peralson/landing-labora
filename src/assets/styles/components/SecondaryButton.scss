@@ -1,21 +1,21 @@
 @import "../Vars.scss";
 
-.primary {
+.secondary {
     padding: 10px 25px;
     border-radius: 4px;
-    background-color: $accent;
+    border: 2px solid $accent;
     cursor: pointer;
 };
 
-.primaryText {
+.secondaryText {
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-    color: $white;
+    color: $accent;
     font-weight: bolder;
 }
 
-.primaryText a {
-    color: $white;
+.secondaryText a {
+    color: $accent;
     text-decoration: none;
 }

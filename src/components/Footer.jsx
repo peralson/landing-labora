@@ -1,6 +1,10 @@
 // React
 import React, { useState } from 'react'
 
+// Libs
+import { Formik, Form, Field } from 'formik'
+import * as Yup from 'yup'
+
 // Components
 import PrimaryButton from './PrimaryButton'
 import SmallTitle from './SmallTitle'
@@ -11,43 +15,57 @@ import SuccessText from './SuccessText'
 import '../assets/styles/components/Footer.scss'
 
 const Footer = () => {
-    const [email, setEmail] = useState('')
-    const [error, setError] = useState(null)
     const [success, setSuccess] = useState(null)
     const [loading, setLoading] = useState(false)
 
-    const handleInput = e => setEmail(e.target.value)
-
-    const handleSubmit = e => {
-        e.preventDefault()
-        setError(null)
-
-        if (email === '') return setError('Introduce un correo válido')
-
-        setLoading(true)
-        // Send to firebase OR handle an email
-        setTimeout(() => {
-            setEmail('')
-            setLoading(false)
-            setSuccess('Ya lo hemos reecibido. Contactaremos contigo en menos de 48 horas.')
-        }, 1200);
-    }
+    const SignupSchema = Yup.object().shape({
+        name: Yup.string()
+            .required('El nombre es obligatorio'),
+        company: Yup.string()
+            .required('La empresa es obligatoria'),
+        email: Yup.string().email('Introduce un correo válido').required('El correo es obligatorio'),
+    });
 
     return (
         <footer className="footer">
             <div className="container">
                 <SmallTitle>¿Quieres saber más?</SmallTitle>
-                <form className="form">
-                    <input
-                        className="input"
-                        placeholder="Déjanos tu correo electrónico"
-                        value={email}
-                        onChange={handleInput}
-                    />
-                    <PrimaryButton onSelect={handleSubmit}>{loading ? 'Enviando...' : 'Contactar'}</PrimaryButton>
-                </form>
-                {error && <ErrorText>{error}</ErrorText>}
-                {success && <SuccessText>{success}</SuccessText>}
+                <Formik
+                    initialValues={{
+                        name: '',
+                        company: '',
+                        email: '',
+                    }}
+                    validationSchema={SignupSchema}
+                    onSubmit={values => {
+                        setLoading(true)
+
+                        console.log(values)
+
+                        setTimeout(() => {
+                            setLoading(false)
+                            setSuccess('¡Gracias! nos pondremos en contacto contigo en menos de 48 horas.')
+                            setTimeout(() => setSuccess(null), 2000)
+                        }, 1200)
+                    }}
+                >
+                    {({ errors, touched, submitForm }) => (
+                        <Form>
+                            <div className="footer__form-content">
+                                <div className="footer__form">
+                                    <Field placeholder="Nombre" className="input name" name="name" />
+                                    <Field placeholder="Empresa" className="input company" name="company" />
+                                    <Field placeholder="Email" className="input email" name="email" type="email" />
+                                    <PrimaryButton onSelect={submitForm}>{loading ? 'Enviando...' : 'Contactar'}</PrimaryButton>
+                                </div>
+                                {errors.name && touched.name && <ErrorText>{errors.name}</ErrorText>}
+                                {errors.company && touched.company && <ErrorText>{errors.company}</ErrorText>}
+                                {errors.email && touched.email && <ErrorText>{errors.email}</ErrorText>}
+                                {success && <SuccessText>{success}</SuccessText>}
+                            </div>
+                        </Form>
+                    )}
+                </Formik>
             </div>
         </footer>
     )

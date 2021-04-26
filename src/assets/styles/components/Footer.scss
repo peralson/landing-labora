@@ -10,11 +10,16 @@
     flex-direction: column;  
     margin: 0 auto;
     width: 90%;
-    max-width: 800px;
+    max-width: 1200px;
 }
 
-.form {
+.footer__form-content {
+    padding: 0 15px;
+}
+
+.footer__form {
     display: flex;
+    align-items: center;
     width: 100%;
 }
 
@@ -25,17 +30,46 @@
     border: none;
     border-radius: 4px;
     font-size: 16px;
+    line-height: 24px;
     padding: 10px 15px;
     color: $white;
 }
 
-::placeholder {
-    color: $white;
+.input:focus {
+    outline: none;
+    border: 1px solid $white;
 }
 
-@media only screen and (max-width: 540px) {
-    .form {
+.input.name {
+    flex: 1;
+}
+.input.company {
+    flex: 1;
+}
+.input.email {
+    flex: 2;
+}
+
+::placeholder {
+    color: rgba($color: $white, $alpha: .4);
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 880px) {
+    .footer__form-content {
+        padding: 0;
+    }
+
+    .footer__form {
         flex-direction: column;
+    }
+
+    .footer__form .primary {
+        width: 100%;
+    }
+
+    .input.email {
+        margin-bottom: 20px;
     }
 
     .input {
