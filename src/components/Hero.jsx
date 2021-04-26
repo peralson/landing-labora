@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 // Components
 import PrimaryButton from './PrimaryButton'
+import Title from './Title'
 
 // Styles
 import '../assets/styles/components/Hero.scss'
@@ -12,7 +13,7 @@ const Hero = () => (
     <div className="hero">
         <div className="hero__container">
             <div className="hero__side hero__leftBottom">
-                <h1>Contrata a tu personal de corta duración en un click.</h1>
+                <Title>Contrata a tu personal de corta duración en un click.</Title>
                 <h5>Gestiona de manera automatizada todo el proceso de contratación de personal para periodos inferiores a 5 días.</h5>
                 <div className="hero__cta">
                     <PrimaryButton>

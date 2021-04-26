@@ -1,0 +1,36 @@
+@import "../Vars.scss";
+
+.features {
+    margin-top: 160px;
+}
+
+.features__container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.all__features {
+    margin-top: 100px;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 60px;
+}
+
+@media only screen and (max-width: 860px) {
+    .all__features {
+        padding: 0 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .all__features {
+        padding: 0;
+        grid-template-columns: 1fr;
+        column-gap: 40px;
+        row-gap: 60px;
+    }
+}

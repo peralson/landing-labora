@@ -1,0 +1,34 @@
+@import "../Vars.scss";
+
+.feature-item__container {
+    border-radius: 10px;
+    background-color: $lightprimary;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 30px 30px;
+}
+
+.feature-item__image {
+    transform: translateY(-40px);
+    align-self: center;
+}
+
+.feature-item__title {
+    color: $white;
+    transform: translateY(-20px);
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.feature-item__desc {
+    color: $darkgrey;
+    font-size: 19px;
+    line-height: 27px;
+}
+
+@media only screen and (max-width: 800px) {
+    .feature-item__container {
+        padding: 0 20px 20px 20px;
+    }
+}
