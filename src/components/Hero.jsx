@@ -12,7 +12,7 @@ const Hero = () => (
     <div className="hero">
         <div className="hero__container">
             <div className="hero__side hero__leftBottom">
-                <h1>Contrataciones de corta duración, en un click.</h1>
+                <h1>Contrata a tu personal de corta duración en un click.</h1>
                 <h5>Gestiona de manera automatizada todo el proceso de contratación de personal para periodos inferiores a 5 días.</h5>
                 <div className="hero__cta">
                     <PrimaryButton>

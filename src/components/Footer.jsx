@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 // Components
 import PrimaryButton from './PrimaryButton'
+import SmallTitle from './SmallTitle'
 import ErrorText from './ErrorText'
 import SuccessText from './SuccessText'
 
@@ -35,7 +36,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container">
-                <h4 className="cta">¿Quieres saber más?</h4>
+                <SmallTitle>¿Quieres saber más?</SmallTitle>
                 <form className="form">
                     <input
                         className="input"

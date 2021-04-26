@@ -1,0 +1,23 @@
+@import "../Vars.scss";
+
+.li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.li .li__container {
+    display: flex;
+}
+
+.li .li__image {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.li p {
+    flex: 1;
+    color: $darkgrey;
+    font-size: 16px;
+    line-height: 24px;
+}

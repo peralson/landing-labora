@@ -1,0 +1,44 @@
+@import "../Vars.scss";
+
+.htw {
+    margin-top: 160px;
+}
+
+.htw__container {
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.gap {
+    width: 60px;
+    height: 60px;
+}
+
+.htw__side {
+    flex: 1;
+}
+
+.htw__side__image-container {
+    width: 100%;
+    display: flex;
+}
+
+.htw__side img {
+    width: 85%;
+}
+
+@media only screen and (max-width: 800px) {
+    .htw__container {
+        flex-direction: column;
+    }
+
+    .htw__side img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    
+}

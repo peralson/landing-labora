@@ -18,9 +18,9 @@ const Header = () => {
                     <img className="header__img" src={logo} alt="Platzi Video" />
                 </Link>
                 <div className="header__menu">
-                    <div className="header__menu__link">
+                    {/* <div className="header__menu__link">
                         <Link to="/for-workers">¿Eres trabajador?</Link>
-                    </div>
+                    </div> */}
                     <PrimaryButton>
                         <Link to="/">Pedir una demo</Link>
                     </PrimaryButton>

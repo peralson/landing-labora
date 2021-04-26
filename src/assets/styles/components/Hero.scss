@@ -1,7 +1,7 @@
 @import "../Vars.scss";
 
 .hero {
-    margin-top: 100px;
+    padding-top: 160px;
 }
 
 .hero__container {
@@ -55,6 +55,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .hero {
+        padding-top: 100px;
+    }
+
     .hero__container {
         flex-direction: column-reverse;
     }
