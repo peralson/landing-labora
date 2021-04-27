@@ -1,12 +1,13 @@
 @import "../Vars.scss";
 
 .hero {
-    padding-top: 120px;
+    margin-top: 180px;
 }
 
 .hero__container {
     margin: 0 auto;
     display: flex;
+    align-items: center;
     width: 90%;
     max-width: 1200px;
 }
@@ -15,12 +16,7 @@
     flex: 1;
 }
 
-.hero__leftBottom {
-    margin-top: 120px;
-}
-
 .hero__cta {
-    margin-top: 25px;
     display: flex;
 }
 
@@ -39,34 +35,29 @@
 }
 
 .hero__rightTop {
-    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero__rightTop .img {
-    background-image: url('../../img/hero-bg.png');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 100%;
+    height: 320px;
     border-radius: 10px;
+    transform: rotateY(6deg) rotateZ(1deg) rotateX(-2deg);
+    box-shadow: 2px 2px 16px rgba($color: $accent, $alpha: .25);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
     .hero {
-        padding-top: 100px;
+        margin-top: 120px;
     }
 
     .hero__container {
         flex-direction: column-reverse;
     }
 
-    .hero__rightTop {
-        margin-top: 40px;
-    }
-
     .hero__rightTop .img {
-        height: 300px;
-        background-position: center;
+        height: 240px;
     }
 
     .hero__leftBottom {
@@ -76,18 +67,33 @@
 
 @media only screen and (max-width: 500px) {
     .hero {
-        padding-top: 80px;
-    }
-
-    .hero__rightTop {
-        margin-top: 20px;
+        margin-top: 100px;
     }
 
     .hero__rightTop .img {
-        height: 180px;
+        height: 200px;
     }
 
     .hero__leftBottom {
         margin-top: 20px;
+    }
+
+    .hero__rightTop .img {
+        transform: none;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .hero {
+        margin-top: 80px;
+    }
+
+    .hero__rightTop .img {
+        height: 160px;
+    }
+
+    .hero__side h5 {
+        font-size: 17px;
+        line-height: 24px;
     }
 }

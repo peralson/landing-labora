@@ -1,10 +1,23 @@
 @import "../Vars.scss";
 
 .small-title {
-    width: 100%;
     margin-bottom: 25px;
     font-size: 30px;
     color: $white;
     font-weight: bolder;
     line-height: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+    .small-title {
+        font-size: 27px;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .small-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
 }

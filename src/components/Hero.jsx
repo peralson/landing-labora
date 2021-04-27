@@ -8,6 +8,7 @@ import Title from './Title'
 
 // Styles
 import '../assets/styles/components/Hero.scss'
+import dashboard from '../assets/img/hero-bg.png'
 
 const Hero = () => (
     <div className="hero">
@@ -22,7 +23,7 @@ const Hero = () => (
                 </div>
             </div>
             <div className="hero__side hero__rightTop">
-                <div className="img"></div>
+                <img className="img" src={dashboard} alt="Dashboard" />
             </div>
         </div>
     </div>

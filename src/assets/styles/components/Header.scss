@@ -39,4 +39,13 @@
     color: $white;
     text-decoration: none;
 }
-  
+
+@media only screen and (max-width: 370px) {
+    .header {
+        height: 60px;
+    }
+
+    .header__img {
+        width: 100px;
+    }
+}

@@ -5,7 +5,7 @@ import '../assets/styles/components/Li.scss'
 import todo from '../assets/img/to-do.png'
 import check from '../assets/img/check.png'
 
-const ErrorText = ({ text, type }) => (
+const Li = ({ text, type }) => (
     <li className="li">
         <div className="li__container">
             <img
@@ -18,4 +18,4 @@ const ErrorText = ({ text, type }) => (
     </li>
 )
 
-export default ErrorText
+export default Li

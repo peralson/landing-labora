@@ -19,8 +19,10 @@ import seguridadSocial from '../assets/img/seguridad-social.png'
 const Features = () => (
     <div className="features">
         <div className="features__container">
-            <Title>Todo lo que hacías a mano:</Title>
-            <Title>Automático, inmediato y fácil.</Title>
+            <Title>
+                <span>Todo lo que hacías a mano: </span>
+                lo hacemos facil.
+            </Title>
             <div className="all__features">
                 <FeatureItem
                     title="Trabajadores"
