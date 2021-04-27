@@ -43,8 +43,9 @@
 .hero__rightTop .img {
     height: 320px;
     border-radius: 10px;
-    transform: rotateY(6deg) rotateZ(1deg) rotateX(-2deg);
-    box-shadow: 2px 2px 16px rgba($color: $accent, $alpha: .25);
+    transform: perspective(15cm) rotateY(-15deg) rotateX(5deg) rotateZ(2deg);
+    z-index: 10;
+    box-shadow: 5px 5px 16px rgba($color: $white, $alpha: .2);
 }
 
 @media only screen and (max-width: 840px) {
@@ -76,10 +77,6 @@
 
     .hero__leftBottom {
         margin-top: 20px;
-    }
-
-    .hero__rightTop .img {
-        transform: none;
     }
 }
 
