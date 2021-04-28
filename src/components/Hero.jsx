@@ -8,7 +8,7 @@ import Title from './Title'
 
 // Styles
 import '../assets/styles/components/Hero.scss'
-import dashboard from '../assets/img/hero-bg.png'
+import dashboard from '../assets/img/hero-bg-dos.png'
 
 const Hero = () => (
     <div className="hero">
