@@ -45,6 +45,7 @@
     border-radius: 10px;
     transform: perspective(15cm) rotateY(-15deg) rotateX(5deg) rotateZ(2deg);
     box-shadow: 5px 5px 16px rgba($color: $white, $alpha: .2);
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 840px) {

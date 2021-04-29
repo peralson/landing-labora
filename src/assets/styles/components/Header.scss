@@ -9,7 +9,8 @@
     width: 100%;
     background-color: $primary;
     z-index: 10000;
-    transform: perspective(20cm)
+    transform: perspective(20cm);
+    overflow: hidden;
 }
 
 .header__container {
