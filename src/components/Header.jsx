@@ -21,7 +21,7 @@ const Header = ({ isDemo }) => (
                 </div> */}
                 {!isDemo && (
                     <Link to="/demo">
-                        <PrimaryButton>Pedir una demo</PrimaryButton>
+                        <PrimaryButton>Solicitar una prueba</PrimaryButton>
                     </Link>
                 )}
             </div>

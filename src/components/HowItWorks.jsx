@@ -15,14 +15,12 @@ const HowItWorks = () => (
             <div className="htw__side htw__left">
                 <SmallTitle>Publica tus necesidades de personal.</SmallTitle>
                 <ul>
-                    <Li text="Solo los trabajadores más adecuados aplicarán." type="todo" />
+                    <Li text="Sube tus mejores trabajadores extra a la plataforma." type="todo" />
+                    <Li text="Solo los más adecuados aplicarán." type="todo" />
                     <Li text="Haz click y contrata." type="todo" />
                 </ul>
                 <div className="htw__side__image-container">
-                    <img
-                        src={side}
-                        alt="Contrata en un click."
-                    />
+                    <img src={side} alt="Contrata en un click." />
                 </div>
             </div>
             <div className="gap"></div>
